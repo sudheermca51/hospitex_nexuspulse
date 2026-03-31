@@ -1,4 +1,4 @@
-<suite name="Suite">
+<suite name="Suite" verbose="5">
   <test thread-count="5" name="Test">
     <classes>
       <class name="org.iit.healthcare.adminmodule.ReportsTests"/>
