@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Health_Check_nexuspulse') {
+            steps {
+              bat '''ping 82.197.92.72 -n 5
+                        dir
+                        cd
+                        netstat -a -n -o'''
+            }
+        }
+        stage('Execute_Selenium_Tests') {
+            steps {
+                 git 'https://github.com/sudheermca51/hospitex_nexuspulse.git'
+                 dir('hospitex') {
+                       bat 'mvn clean test'
+                    }
+             }
+    }
+  }
+}
