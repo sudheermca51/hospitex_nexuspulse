@@ -20,7 +20,7 @@ public class InputDataGeneration {
 
 	}
 
-	public String generateRandomString( int upperCaseCount, int lowerCaseCount, int digitCount)
+	public  String generateRandomString( int upperCaseCount, int lowerCaseCount, int digitCount)
 	{
 		//Create an instance of Random class
 		Random random = new Random();
