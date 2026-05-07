@@ -24,11 +24,9 @@ public class LoginPage {
 
     // Admin login
     public HomePage loginValidUser(String username, String password) {
-
         driver.findElement(usernameBy).sendKeys(username);
         driver.findElement(passwordBy).sendKeys(password);
         driver.findElement(loginBy).click();
-
         return new HomePage(driver);
     }
 
@@ -38,7 +36,6 @@ public class LoginPage {
         driver.findElement(usernameBy).sendKeys(username);
         driver.findElement(passwordBy).sendKeys(password);
         driver.findElement(loginBy).click();
-
         return new PatientHomePage(driver);
     }
 }
